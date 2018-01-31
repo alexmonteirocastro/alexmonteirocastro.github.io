@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(showcase-2.jpg) no-repeat;
+    background: url(showcase-2.jpg);
     height: 135vh;
     background-size: cover;
 }
@@ -59,4 +59,20 @@ ul {
 
 .box li a:hover {
     color: #b9b9b9;
+}
+
+
+/*Media queries for resposivity*/
+
+@media(max-width: 768px) {
+    .box {
+        width: 50%;
+        padding: 20%
+    }
+    .box h1 {
+        font-size: 30px;
+    }
+    .box li {
+        display: block;
+    }
 }
