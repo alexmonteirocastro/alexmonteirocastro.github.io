@@ -1,7 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(showcase-2.jpg);
+    background: url(background.jpg);
+    background-color: #929292;
     height: 135vh;
     background-size: cover;
 }
@@ -64,10 +65,16 @@ ul {
 
 /*Media queries for resposivity*/
 
-@media(max-width: 768px) {
+@media(max-width: 600px) {
+    body {
+        background: rgba(0, 0, 0, 0.55);
+        /*gives body a darker color*/
+    }
     .box {
-        width: 50%;
-        padding: 20%
+        width: 55%;
+        padding: 20%;
+        background: none;
+        /*removes the special background from the box*/
     }
     .box h1 {
         font-size: 30px;
