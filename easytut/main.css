@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*background-image: url(background-pic-3.jpg);*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 100, 0.5)), url(background-pic-3.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*Header section*/
+
+header {
+    /*background: rgb(0, 0, 0, 0.5);*/
+    height: 80px;
+    /*display: inline;*/
+}
+
+
+/*Name and photo at the top left*/
+
+#topname {
+    margin: 20px 50px;
+    height: 60px;
+    float: left;
+}
+
+#nav-bar {
+    background: rgb(0, 0, 0, 0.5);
+    float: right;
+    /*height: 80px;
+    display: inline;*/
+}
+
+#topname .logo {
+    margin-right: 10px;
+    height: 45px;
+    float: left;
+    border-radius: 50%;
+}
+
+#topname .nameLink {
+    /*margin: 20px 50px;*/
+    /*height: 60px;*/
+    /*float: left;*/
+    display: inline;
+    color: #fff;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+
+#topname .nameLink a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#topname .nameLink a:hover {
+    background: #fff;
+    transition: .4s;
+    color: #000;
+}
+
+
+/*Navigation menu*/
+
+.menu {
+    float: right;
+    list-style: none;
+    margin: 20px;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    border: 1px solid #fff;
+}
+
+.btn:hover {
+    background: #fff;
+    transition: .4s;
+    color: #000;
+}
+
+
+/*Welcome Message*/
+
+#showcase {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    font-family: sans-serif;
+    top: 20%;
+}
+
+#showcase h1 {
+    font-size: 42px;
+    margin: 25px;
+    text-transform: uppercase;
+}
+
+
+/*CTA buttons*/
+
+#showcase a {
+    font-size: 25px;
+    /*letter-spacing: 2px;*/
+    margin: 10px;
+    /*padding: 7px 10px;
+    text-decoration: none;*/
+}
+
+#resume-cta {
+    background: #fff;
+    color: #000;
+}
+
+#resume-cta:hover {
+    background: #000;
+    transition: .4s;
+    color: #fff;
+}
+
+#cvpdf {
+    text-transform: uppercase;
+    font-style: italic;
+}
