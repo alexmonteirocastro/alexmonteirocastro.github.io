@@ -1,0 +1,255 @@
+body {
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #E7E7E7;
+    /*very light grey*/
+}
+
+
+/*Global*/
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+/*buttons*/
+
+.download {
+    height: 38px;
+    background: #0E5484;
+    /*blue*/
+    color: #B9B9B9;
+    /*light grey*/
+    border: 0;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/*Header*/
+
+header {
+    background: #B9B9B9;
+    /*light grey*/
+    color: #0E5484;
+    /*blue*/
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #4D4D4D 3px solid;
+    /*dark grey*/
+}
+
+header a {
+    color: #0E5484;
+    /*blue*/
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+    margin-top: 7px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding #profilePic {
+    max-height: 50px;
+    border-radius: 25px;
+    float: left;
+}
+
+header #branding h1 {
+    margin-left: 5px;
+    display: inline;
+}
+
+
+/*Burger Menu*/
+
+.hamburger {
+    display: none;
+}
+
+
+/*Navigation Menu*/
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .current a {
+    color: #4D4D4D;
+    /*dark grey*/
+    font-weight: bold;
+}
+
+header a:hover {
+    color: black;
+    font-weight: bold;
+}
+
+
+/*Shoowcase*/
+
+#showcase {
+    min-height: 400px;
+    /*background:url('../images/showcase.jpg') no-repeat;*/
+    /*background-color: #0E5484;*/
+    /*blue*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 100, 0.5)), url(background-pic-3.jpg);
+    text-align: center;
+    /*color: #E7E7E7;*/
+    /*line-height: 0.5;*/
+    color: #B9B9B9;
+    /*light grey*/
+}
+
+#showcase h1 {
+    margin-top: 60px;
+    font-size: 55px;
+    margin-bottom: 10px;
+    /*line-height: 1;*/
+}
+
+#showcase p {
+    font-size: 20px;
+    /*line-height: 1;*/
+}
+
+
+/*resume section*/
+
+#resume {
+    padding: 15px;
+    color: #E7E7E7;
+    /*very light grey*/
+    background: #4D4D4D;
+    /*dark grey*/
+    text-align: center;
+}
+
+#resume .container a {
+    color: #B9B9B9;
+    /*light grey*/
+    text-decoration: none;
+    font-style: italic;
+}
+
+
+/*boxes*/
+
+#boxes {
+    margin-top: 20px;
+}
+
+#boxes .box {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/*Icons*/
+
+#boxes .box img {
+    width: 150px;
+    height: 150px;
+}
+
+#contentText {
+    text-align: center;
+    font-size: 30px;
+    color: #0E5484;
+    /*blue*/
+}
+
+
+/*footer*/
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #B9B9B9;
+    /*light grey*/
+    background: #0E5484;
+    /*blue*/
+    text-align: center;
+}
+
+
+/*Media Queries*/
+
+@media(max-width: 1035px) {
+    header #branding,
+    header nav,
+    header nav li {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    /*Profile Pic*/
+    header .photo {
+        display: none;
+        /*float: none;*/
+    }
+    header {
+        padding-bottom: 20px;
+    }
+}
+
+@media(max-width: 778px) {
+    #showcase h1 {
+        margin-top: 40px;
+    }
+    /*Burger Menu*/
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        padding: 15px;
+        margin-left: 43%
+    }
+    .line {
+        border-bottom: 4px solid #4D4D4D;
+        /*dark grey*/
+        width: 20%;
+        margin-bottom: 6px;
+    }
+    .hambitem {
+        width: 40%;
+        text-align: center;
+        margin-left: -10%;
+        margin-bottom: 5px;
+    }
+    header nav li {
+        display: none;
+    }
+}
+
+@media(max-width: 768px) {
+    #boxes .box {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+}
