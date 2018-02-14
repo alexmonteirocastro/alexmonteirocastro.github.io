@@ -11,6 +11,23 @@
     <link rel="stylesheet" type="text/css" href="./assets/stylesheets/style.css">
     <script src="./scripts/main.js"></script>
 
+    <script type="text/javascript">
+        window.smartlook || (function(d) {
+            var o = smartlook = function() {
+                    o.api.push(arguments)
+                },
+                h = d.getElementsByTagName('head')[0];
+            var c = d.createElement('script');
+            o.api = new Array();
+            c.async = true;
+            c.type = 'text/javascript';
+            c.charset = 'utf-8';
+            c.src = 'https://rec.smartlook.com/recorder.js';
+            h.appendChild(c);
+        })(document);
+        smartlook('init', 'b13dd3b3236d879733b78fb28150f56845941d47');
+    </script>
+
 </head>
 
 <body>
@@ -58,20 +75,20 @@
     <section id="contentText">
         <div class="container">
             <h1>Contact Me</h1>
-            <form class="contact">
+            <form class="contact" onSubmit="fetchDetails(); return false;">
                 <div>
                     <label>Your Name</label><br>
-                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Name" id="person-name">
                 </div>
                 <div>
                     <label>Your Email</label><br>
-                    <input type="text" placeholder="Email Address">
+                    <input type="text" placeholder="Email Address" id="email-address">
                 </div>
                 <div>
                     <label>Message</label><br>
                     <textarea placeholder="Your message here"></textarea>
                 </div>
-                <button class="button_1" type="submit">Send</button>
+                <button class="button_1">Send</button>
             </form>
         </div>
     </section>
@@ -80,23 +97,14 @@
         <p>Created by Alexandre Castro, Copyright&copy; 2018</p>
     </footer>
 
-    <script type="text/javascript">
-        window.smartlook || (function(d) {
-            var o = smartlook = function() {
-                    o.api.push(arguments)
-                },
-                h = d.getElementsByTagName('head')[0];
-            var c = d.createElement('script');
-            o.api = new Array();
-            c.async = true;
-            c.type = 'text/javascript';
-            c.charset = 'utf-8';
-            c.src = 'https://rec.smartlook.com/recorder.js';
-            h.appendChild(c);
-        })(document);
-        smartlook('init', 'b13dd3b3236d879733b78fb28150f56845941d47');
-        smartlook('tag', 'name', 'contact');
-        smartlook('tag', 'email', 'prokop.buben@example.com');
+    <script>
+        function fetchDetails() {
+            var nome = document.getElementById("person-name").value;
+            var electromail = document.getElementById("email-address").value;
+            console.log("Nome é " + nome + "e o email é:" + electromail);
+            smartlook('tag', 'name', 'nome');
+            smartlook('tag', 'email', 'electromail');
+        }
     </script>
 
 </body>
