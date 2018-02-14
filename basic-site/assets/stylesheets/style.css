@@ -33,6 +33,21 @@ body {
     cursor: pointer;
 }
 
+.button_1 {
+    height: 38px;
+    background: #0E5484;
+    /*blue*/
+    color: #B9B9B9;
+    /*light grey*/
+    border: 0;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 
 /*Header*/
 
@@ -182,6 +197,19 @@ header a:hover {
     font-size: 30px;
     color: #0E5484;
     /*blue*/
+}
+
+
+/*contact form*/
+
+input {
+    width: 15%;
+    padding: 5px;
+}
+
+textarea {
+    width: 30%;
+    padding: 5px;
 }
 
 
