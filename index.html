@@ -13,6 +13,23 @@
     <script src="https://use.fontawesome.com/eeaedf5a6f.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <!--<script src="main.js"></script>-->
+    <script type="text/javascript">
+        window.smartlook || (function(d) {
+            var o = smartlook = function() {
+                    o.api.push(arguments)
+                },
+                h = d.getElementsByTagName('head')[0];
+            var c = d.createElement('script');
+            o.api = new Array();
+            c.async = true;
+            c.type = 'text/javascript';
+            c.charset = 'utf-8';
+            c.src = 'https://rec.smartlook.com/recorder.js';
+            h.appendChild(c);
+        })(document);
+        smartlook('init', '4ce02a3b91fb0d212bbdf14f80e0785119a5d5ae');
+    </script>
+
 </head>
 
 <body>
