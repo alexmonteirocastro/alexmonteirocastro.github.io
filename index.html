@@ -1,57 +1,326 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Content Writer, Web Developer and JavaScript Apprentice">
-    <meta name="keywords" content="content writer, web developer, JavaScript developer, Alexandre Castro">
+    <meta name="description" content="Content Writer, Web Developer and QA Tester">
+    <meta name="keywords" content="content writer, web developer, JavaScript developer, QA tester, Alexandre Castro">
     <meta name="author" content="Alexandre Castro">
-    <link rel="icon" type="image/png" href="alex-favicon.png">
-    <title>Alexandre Castro</title>
-    <script src="https://use.fontawesome.com/eeaedf5a6f.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <!--<script src="main.js"></script>-->
-    <script type="text/javascript">
-        window.smartlook || (function(d) {
-            var o = smartlook = function() {
-                    o.api.push(arguments)
-                },
-                h = d.getElementsByTagName('head')[0];
-            var c = d.createElement('script');
-            o.api = new Array();
-            c.async = true;
-            c.type = 'text/javascript';
-            c.charset = 'utf-8';
-            c.src = 'https://rec.smartlook.com/recorder.js';
-            h.appendChild(c);
-        })(document);
-        smartlook('init', '4ce02a3b91fb0d212bbdf14f80e0785119a5d5ae');
-    </script>
-
+    <link rel="icon" type="image/png" href="img/alex-favicon.png">
+    <title>Complete Bootstrap 4 Website Layout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="box">
-        <img src="alex.png" alt="profile-picture" class="box-img">
-        <h1>Alexandre Castro</h1>
-        <h5>Welcome to my Github portfolio page!</h5>
-        <p>This page will host my coding projects. I have done a few things in HTML+CSS+JS. And also a couple of basic plain JavaScript applications.</p>
-        <h2>Webpage examples from Code tutorials on Youtube</h2>
-        <ul class="my-projects">
-            <li class="porfolio-pages"><a href="./grid-biz" rel="noopener">Responsive website - built with CSS grid.</a></li>
-            <li class="porfolio-pages"><a href="./bootstrap-site" rel="noopener">Bootstrap responsive website</a></li>
-            <li class="porfolio-pages"><a href="./basic-site" rel="noopener">Basic responsive website</a></li>
-            <li class="porfolio-pages"><a href="./easytut" rel="noopener">Another example of a webpage - not responsive</a></li>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <!-- This is the Logo brand -->
+            <a href="#" class="navbar-brand"><img src="img/me.png" alt="logo" id="profile-pic"> Alex Castro</a>
+            <div id="socialMedia">
+                <a href="https://www.linkedin.com/in/alexmonteirodecastro/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/alexmcastro17" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/alexmonteirocastro" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="#slides" class="nav-link sliding-link">Home</a></li>
+                    <li class="nav-item"><a href="#aboutMe" class="nav-link sliding-link">About</a></li>
+                    <li class="nav-item"><a href="#cvitae" class="nav-link sliding-link">CV</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link sliding-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="#contactMe" class="nav-link sliding-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--- Image Slider -->
+    <div id="slides" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#slides" data-slide-to="0" class="active"></li>
+            <li data-target="#slides" data-slide-to="1"></li>
+            <li data-target="#slides" data-slide-to="2"></li>
         </ul>
-        <h2>Find me on Social Media</h2>
-        <ul>
-            <li class="links"><a href="https://www.linkedin.com/in/alexmonteirodecastro/" target="_blank" rel="noopener"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-            <li class="links"><a href="https://twitter.com/alexmcastro17" target="_blank" rel="noopener"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-            <li class="links"><a href="https://github.com/alexmonteirocastro" target="_blank" rel="noopener"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
-        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/web-development.jpg" alt="background">
+                <div class="carousel-caption">
+                    <h1 class="display-2">Web Development</h1>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/content-writing.jpg" alt="background2">
+                <div class="carousel-caption">
+                    <h1 class="display-2">Content Writing</h1>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/software-testing.jpg" alt="background3">
+                <div class="carousel-caption">
+                    <h1 class="display-2">QA Testing</h1>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!--- Jumbotron -->
+    <div class="container-fluid">
+        <div class="row jumbotron text-center">
+            <div class="col-12">
+                <p class="lead">Started at Smartlook in customer support and localization, I have shifted into content writing and QA testing.<br>I have also worked as a Content Marketer at Freemius, writing blog articles, doing SEO and content distribution.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--- Welcome Section -->
+    <div class="container-fluid padding" id="aboutMe">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-4">About Me</h1>
+            </div>
+            <hr>
+            <div class="col-12">
+                <p class="lead">I have been working at Smartlook for over 1 year. Currently I work as a content writer and also as a QA tester.</p>
+                <p class="lead">During my collaboration with Freemius, I have had the chance to further develop my writing techniques and learn important aspects such as SEO and content distribution.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--- Three Column Section -->
+    <div class="container-fluid padding">
+        <div class="row text-center padding">
+            <div class="col-12">
+                <h2 class="cv-section-title">Skills</h2>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <i class="fas fa-code"></i>
+                <h3>Web Development</h3>
+                <p>I have been learning Web Development for over 1 year. I have taken several courses and tutorials and managed to develop a few <a href="#portfolio" class="sliding-link">basic website templates</a> on my own.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <i class="fas fa-paragraph"></i>
+                <h3>Content Writing</h3>
+                <p>I have created the <a href="https://www.smartlook.com/help/smartlook-user-guide/" target="_blank" rel="noopener">Smartlook User Guide</a> and am the author of the <a href="https://www.smartlook.com/blog/category/smartlook-school/" target="_blank"
+                        rel="noopener">Smartlook School</a> as well as a few other articles on the <a href="https://www.smartlook.com/blog/category/smartlook/" target="_blank" rel="noopener">Smartlook blog</a>.</p>
+                <p>While working at Freemius I managed write an article about <a href="https://freemius.com/blog/gifs-plugin-marketing-page-conversion/" target="_blank" rel="noopener">the use GIFs as a means for for conversion rate optimization</a>.</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <p>I have been learning Vanilla JavaScript for over 6 months. Check out my projects here.</p>
+            </div>
+
+        </div>
+        <hr class="my-4">
+    </div>
+
+    <!--- Fixed background -->
+    <div class="container-fluid padding" id="cvitae">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-4">My CV</h1>
+            </div>
+            <div class='academy-badge col-12'>
+                <a href='http://academy.hubspot.com/certification' title='Content Marketing'>
+                    <img src='http://api.hubapi.com/academy/v1/badge-image/052A9363340342F0AE31CE77186BF42D' />
+                </a>
+            </div>
+            <hr>
+            <div class="col-12">
+                <a href="Alex-Castro_CV.pdf" class="sliding-link"><button type="button" class="btn btn-outline-primary">My Resumé In PDF</button></a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--- Curriculum Section -->
+    <button class="cvitae" data-toggle="collapse" data-target="#experience">
+		Check Out My Work Experience
+	</button>
+    <div id="experience" class="collapse">
+        <!--- Two Column Section -->
+        <div class="container-fluid padding">
+            <div class="row text-center padding">
+                <div class="col-12">
+                    <h2 class="cv-section-title">Job Experience</h2>
+                </div>
+            </div>
+            <div class="row padding">
+                <div class="col-lg-6 text-center">
+                    <h4>QA Tester @ <a href="https://www.smartlook.com" target="_blank" rel="noopener">Smartlook</a></h4>
+                    <h5 class="job-period">Since December 2017</h5>
+                    <p>Testing of our Dashboard.<br>Establishing the "bridge" between support and development by providing advanced troubleshooting and monitoring the status of support tickets.</p>
+                    <h4>Content Writer @ Smartlook</h4>
+                    <h5 class="job-period">Since April 2017</h5>
+                    <p>Created, translated and responsible for the maintenance of the Smartlook User Guide.<br>Mantainenance, update and translation of our <a href="https://www.smartlook.com/help/" target="_blank" rel="noopener">Help Section</a>.<br>Published
+                        the Smartlook School series and authored a few other articles on our Blog.</p>
+                    <h4>Content Marketer @ <a href="https://freemius.com" target="_blank" rel="noopener">Freemius</a></h4>
+                    <h5 class="job-period">December 2017 - March 2018</h5>
+                    <p>Content development for the Freemius Blog.<br>Content marketing across different platforms such as Online Forums and Social Media.<br>Management and proofreading of guest posts.<br>Email Marketing and content distribution.<br>SEO.</p>
+                    <h4>Customer Happiness Hero and Localization @ Smartlook</h4>
+                    <h5 class="job-period">January 2017 - November 2017</h5>
+                    <p>Technical support and translation for our two products: <a href="https://www.smartsupp.com" target="_blank" rel="noopener">Smartsupp Live Chat</a> and Smartlook.<br>Technical support in English and Portuguese via email and live chat.<br>Localization
+                        and translation of banners for Facebook campaigns.<br>Moderation of our social media pages.</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <h3 class="other-jobs">Other Jobs</h3>
+                    <h4>EVS Volunteer @ <a href="https://goodenergiesalliance.com" target="_blank" rel="noopener">GEAI</a></h4>
+                    <h5 class="job-period">October 2016 - January 2017</h5>
+                    <p>Participated on an EVS Project in an environmental NGO where I got to write several blog articles about major environmental issues.<br>Helped in the management and moderation of the Social Media pages.</p>
+                    <h4>Travel Consultant @ <a href="https://www.kiwi.com" target="_blank" rel="noopener">Kiwi.com</a></h4>
+                    <h5 class="job-period">May 2016 - July 2016</h5>
+                    <p>Bilingual Phone, Email and Live Chat Support for travellers.</p>
+                    <h3 class="other-jobs">Education</h3>
+                    <h4>B.Sc. in Pharmacy</h4>
+                    <h5 class="job-period">2011-2015</h5>
+                    <p><a href="https://www.estesl.ipl.pt/en/estesl" target="_blank" rel="noopener">Lisbon School of Health Technology</a>, Lisbon</p>
+                    <h4>High School Diploma</h4>
+                    <h5 class="job-period">2006-2009</h5>
+                    <p>Escola Secundária da Cidadela, Cascais</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--- Portfolio -->
+    <div class="container-fluid padding" id="portfolio">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-4">My Portfolio</h1>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <!--- Cards -->
+    <div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-sm-6 col-md-3">
+                <div class="card">
+                    <img src="img/portfolio/basic-site.png" alt="basic site" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Basic Site</h4>
+                        <p class="card-text">A responsive website built with HTML5 and CSS3.</p>
+                        <a href="https://alexmonteirocastro.github.io/basic-site/" class="btn btn-outline-primary">See Site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card">
+                    <img src="img/portfolio/bootstrap.png" alt="bootstrap site" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Bootstrap Site</h4>
+                        <p class="card-text">Responsive website built with Bootstrap 3.</p>
+                        <a href="https://alexmonteirocastro.github.io/bootstrap-site/" class="btn btn-outline-primary">See Site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card">
+                    <img src="img/portfolio/github-page.png" alt="github page" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Github Page</h4>
+                        <p class="card-text">Basic Static page. This is my first personal github portfolio page.</p>
+                        <a href="https://alexmonteirocastro.github.io/gihub-page/" class="btn btn-outline-primary">See Site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card">
+                    <img src="img/portfolio/pierogrid.png" alt="pierogrid site" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">CSS Grid Site</h4>
+                        <p class="card-text">Responsive website built with CSS grid.</p>
+                        <a href="https://alexmonteirocastro.github.io/grid-biz/" class="btn btn-outline-primary">See Site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--- Two Column Section -->
+    <div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-lg-6">
+                <h2>My philosophy</h2>
+                <p>I prefer working in start-ups because I enjoy the pragmatic non-formal approach and the freedom to learn and try out new roles and approaches. This allows me to grow quicker and makes me feel accomplished.</p>
+                <p>In my spare time, I enjoy reading, hiking, cycling, and coding. I am a self-taught JavaScript apprentice. I've been learning JavaScript for about 6 months and, in the the long run, I intend to acquire the skills to be a full-stack JavaScript
+                    developer.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <img src="img/bled.png" alt="bootstrap" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!--- Connect -->
+    <div class="container-fluid padding" id="contactMe">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-4">Contact Me</h1>
+            </div>
+            <hr>
+            <div class="row welcome text-center">
+                <form method="POST" action="http://formspree.io/alex@smartsupp.com">
+                    <div class="form-group col-12">
+                        <input type="text" class="form-control form-control-lg" placeholder="Your Name" name="name">
+                    </div>
+                    <div class="form-group col-12">
+                        <input type="text" class="form-control form-control-lg" placeholder="Your email" name="email">
+                    </div>
+                    <div class="form-group col-12">
+                        <textarea class="form-control form-control-lg" placeholder="Your message here" name="message"></textarea>
+                    </div>
+                    <input type="submit" class="btn btn-primary btn-block" value="Send" name="">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--- Footer -->
+    <footer>
+        <div class="container-fluid padding-footer">
+            <div class="row text-center">
+                <div class="col-12">
+                    <p>&copy; Developed by Alexandre Castro 2018 based on the <a href="https://www.youtube.com/watch?v=9cKsq14Kfsw" class="tutorial-referal">Bootstrap 4 tutorial by Drew Ryan</a>.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var home = document.getElementById('slides');
+        var aboutMe = document.getElementById('aboutMe');
+        var cv = document.getElementById('experience');
+        var portfolio = document.getElementById('portfolio');
+        var contactMe = document.getElementById('contactMe');
+
+        $(".sliding-link").click(function(e) {
+            e.preventDefault();
+            var aid = $(this).attr("href");
+            $('html,body').animate({
+                scrollTop: $(aid).offset().top
+            }, 'slow');
+        });
+    </script>
+
 </body>
 
 </html>
