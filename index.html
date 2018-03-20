@@ -15,6 +15,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link href="style.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        window.smartlook || (function(d) {
+            var o = smartlook = function() {
+                    o.api.push(arguments)
+                },
+                h = d.getElementsByTagName('head')[0];
+            var c = d.createElement('script');
+            o.api = new Array();
+            c.async = true;
+            c.type = 'text/javascript';
+            c.charset = 'utf-8';
+            c.src = 'https://rec.beta.smartlook.com/recorder.js';
+            h.appendChild(c);
+        })(document);
+        smartlook('init', '011ed5413c90d854589bea20a1b5096d999a990e', {
+            "host": "manager.beta.smartlook.com"
+        });
+    </script>
 </head>
 
 <body>
