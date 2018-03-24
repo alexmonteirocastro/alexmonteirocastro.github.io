@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RoboPage</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+
+    <audio id="myAudio">
+				<source src="do-you-know-da-wey.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+	</audio>
+    <audio id="myAudio2">
+			<source src="u_dk_de_wae.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+	</audio>
+    <audio id="myAudio3">
+			<source src="why_are_u_running.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+	</audio>
+
+    <h1>Robot Friend</h1>
+    <div class="robots">
+        <div class="android">
+            <div class="head" onmouseover="playAudio()">
+                <div class="eyes">
+                    <div class="left_eye"></div>
+                    <div class="right_eye"></div>
+                </div>
+            </div>
+            <div class="upper_body">
+                <div class="left_arm"></div>
+                <div class="torso" onmouseover="playAudio2()">
+                    <div class="hole"></div>
+                </div>
+                <div class="right_arm"></div>
+            </div>
+            <div class="lower_body">
+                <div class="left_leg" onmouseover="playAudio3()"></div>
+                <div class="right_leg"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("myAudio");
+        var y = document.getElementById("myAudio2");
+        var z = document.getElementById("myAudio3");
+
+        function playAudio() {
+            x.play();
+        }
+
+        function playAudio2() {
+            y.play();
+        }
+
+        function playAudio3() {
+            z.play();
+        }
+    </script>
+
+</body>
+
+</html>
