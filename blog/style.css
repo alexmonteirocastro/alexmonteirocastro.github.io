@@ -1,0 +1,50 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: auto;
+}
+
+.blog-header {
+    display: flex;
+    justify-content: center;
+    background-color: #7887AB;
+    color: #061539;
+}
+
+.post {
+    background-color: #96afaf80;
+    color: #003333;
+}
+
+.post-body {
+    text-align: left;
+}
+
+.article {
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+}
+
+.post-body {
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+footer {
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    background-color: #7887AB;
+    color: #061539;
+}
+
+footer a {
+    color: #061539;
+    text-decoration: none;
+}
