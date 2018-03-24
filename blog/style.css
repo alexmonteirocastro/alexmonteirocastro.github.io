@@ -21,10 +21,6 @@ body {
     color: #003333;
 }
 
-.post-body {
-    text-align: left;
-}
-
 .article {
     text-align: center;
     margin: 10px;
@@ -32,6 +28,8 @@ body {
 }
 
 .post-body {
+    text-align: left;
+    width: 85%;
     margin: auto;
     margin-bottom: 30px;
 }
