@@ -31,7 +31,7 @@
             h.appendChild(c);
         })(document);
         smartlook('init', 'b13dd3b3236d879733b78fb28150f56845941d47');
-        mixpanel.track( "My Event via Smartlook", {"Smartlook playURL": smartlook.playUrl});
+        
     </script>
 <!--
 <
@@ -183,7 +183,7 @@ mixpanel.init("91a02e4115bcbc5fc961a9ba051160be");</script><!-- end Mixpanel -->
 
 
     <!--- Curriculum Section -->
-    <button class="cvitae" data-toggle="collapse" data-target="#experience" onclick="mixpanel.track('Collapse toggle')" >
+    <button class="cvitae" data-toggle="collapse" data-target="#experience" onclick="mixpanel.track( 'My Event via Smartlook', {'Smartlook playURL': smartlook.playUrl})" >
 		Check Out My Work Experience
 	</button>
     <div id="experience" class="collapse">
