@@ -1,0 +1,112 @@
+/* This removes any defualt browser spacing and margins - thus "resetting" it... */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 680px;
+    margin: 1rem auto;
+}
+
+.schedule-heading {
+    margin: 1rem auto;
+    font-size: 2rem;
+}
+
+.hour-grid {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    min-width: 300px;
+}
+
+.hour {
+    font-size: .8rem;
+}
+
+.daily-profiles{
+    height: 1rem;
+    margin: .5rem 5px 5px;
+    background-color: #dedcdc82;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+}
+
+.Comfort, .Eco, .Standby {
+    height: 100%;
+    position: absolute;
+}
+
+.Comfort {
+    background-color: #dedcdca3;
+}
+
+.Eco {
+    background-color: #015368;
+}
+
+.Standby{
+    background-color: #858585;
+}
+
+.schedule-caption {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mode-caption {
+    display: inline-block;
+    margin: 1rem 1rem;
+    padding: .5rem;
+}
+
+/*
+* Styles for tooltip when overing over week day bars 
+* NOTE: does not work on touch screen devices
+*/
+
+
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN*/
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 500px) {
+    .wrapper {
+        padding: 0 2px;
+     }
+    .hour {
+        font-size: .5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .schedule-heading {
+        font-size: 25px;
+    }
+}
+
+/* The keyword 'only' is because we want to hide te meda query from old devioces that do not support appropriate media query interpretation */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    .wrapper {
+        padding: 0 1rem;
+     }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .schedule-heading {
+        font-size: 40px;
+    }
+}
