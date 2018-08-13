@@ -72,7 +72,6 @@ for (var d = 0; d < 7; d++) {
     dayAndBar.appendChild(dayDiv);
     var profileBar = document.createElement('div');
     profileBar.classList.add('daily-profiles');
-    console.log(dayAndBar);
     scheduleVisual.appendChild(dayAndBar);
     scheduleVisual.appendChild(profileBar);
 }
@@ -123,13 +122,16 @@ parentBars.forEach(function (bar, index) {
         bar.style.backgroundColor = prevStyle.getPropertyValue('background-color');
     } else if (index > 0 && !bar.previousElementSibling.previousElementSibling.lastElementChild) {
         var prevStyle = window.getComputedStyle(bar.previousElementSibling.previousElementSibling);
-        console.log(bar.previousElementSibling.previousElementSibling)
         bar.style.backgroundColor = prevStyle.getPropertyValue('background-color');
     }
 });
 
 // for Monday morning, get mode from previous Sunday
-parentBars[0].style.backgroundColor = getComputedStyle(parentBars[parentBars.length - 1]).getPropertyValue('background-color');
+if (parentBars[parentBars.length - 1].lastElementChild) {
+    parentBars[0].style.backgroundColor = getComputedStyle(parentBars[parentBars.length - 1].lastElementChild).getPropertyValue('background-color');
+} else {
+    parentBars[0].style.backgroundColor = getComputedStyle(parentBars[parentBars.length - 1]).getPropertyValue('background-color');
+}
 
 // Generates the schedule caption
 for (key in weekDayProfiles) {
