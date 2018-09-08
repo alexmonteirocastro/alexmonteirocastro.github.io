@@ -52,7 +52,7 @@ function updateSigninStatus(isSignedIn){
         authorizeButton.style.display = 'block';
         signoutButton.style.display = 'none';
         content.style.display = 'none';
-        // videoContainer.style.display = 'none';
+        videoContainer.style.display = 'none';
     }
 }
 
