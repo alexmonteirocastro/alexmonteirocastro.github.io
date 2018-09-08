@@ -17,8 +17,6 @@ const channelForm = document.getElementById('channel-form');
 const channelInput = document.getElementById('channel-inout');
 const videoContainer = document.getElementById('video-container');
 
-console.log(content)
-
 const defaultChannel = 'techguyweb';
 
 // Load auth2 library
@@ -29,7 +27,7 @@ function handleClientLoad(){
 // Init API client library and set up sign in listeners
 function initClient() {
     gapi.client.init({
-        disoveryDocs: DISCOVERY_DOCS,
+        discoveryDocs: DISCOVERY_DOCS,
         clientId: CLIENT_ID,
         scope: SCOPES
     }).then(() => {
