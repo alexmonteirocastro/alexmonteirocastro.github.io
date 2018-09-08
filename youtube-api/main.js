@@ -75,7 +75,7 @@ function getChannel(channel){
         })
         .then(response => {
             console.log(response);
-            const channel = response.results.item[0];
+            const channel = response.result.items[0];
             console.log(channel);
             const output = `
                 <ul class="collection">
