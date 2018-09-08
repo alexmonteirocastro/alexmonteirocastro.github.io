@@ -20,7 +20,7 @@ const videoContainer = document.getElementById('video-container');
 const defaultChannel = 'techguyweb';
 
 // Load auth2 library
-function handleClientLoad(){
+function handleClientLoad() {
     gapi.load('client:auth2', initClient);
 }
 
@@ -41,8 +41,8 @@ function initClient() {
 }
 
 // Update UI sign in state changes
-function updateSigninStatus(isSignedIn){
-    if(isSignedIn){
+function updateSigninStatus(isSignedIn) {
+    if (isSignedIn) {
         authorizeButton.style.display = 'none';
         signoutButton.style.display = 'block';
         content.style.display = 'block';
@@ -57,17 +57,23 @@ function updateSigninStatus(isSignedIn){
 }
 
 // Handle login
-function handleAuthClick(){
+function handleAuthClick() {
     gapi.auth2.getAuthInstance().signIn();
 }
 
 // Handle logout
-function handleSignoutClick(){
+function handleSignoutClick() {
     gapi.auth2.getAuthInstance().signOut();
 }
 
+// Display channel data
+function showChannelData(data){
+    const channelData = document.getElementById('channel-data');
+    channelData.innerHTML = data;
+}
+
 // Get channel from API
-function getChannel(channel){
+function getChannel(channel) {
     gapi.client.youtube.channels
         .list({
             part: 'snippet,contentDetails,statistics',
@@ -86,7 +92,10 @@ function getChannel(channel){
                     <li class="collection-item">Videos: ${channel.statistics.videoCount}</li>
                 </ul>
                 <p>${channel.snippet.description}</p>
+                <hr>
+                <a class="btn grey darken-2" target="_blank" href="https://youtube.com/${channel.snippet.customUrl}">Visit Channel</a>
             `;
+            showChannelData(output);
         })
         .catch(err => alert('No channel by the name of ' + channel))
 }
