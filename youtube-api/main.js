@@ -75,7 +75,7 @@ function getChannel(channel){
         })
         .then(response => {
             console.log(response);
-            const channel = response.results.items[0];
+            const channel = response.results.item[0];
             console.log(channel);
             const output = `
                 <ul class="collection">
@@ -85,7 +85,7 @@ function getChannel(channel){
                     <li class="collection-item">Views: ${channel.statistics.viewCount}</li>
                     <li class="collection-item">Videos: ${channel.statistics.videoCount}</li>
                 </ul>
-                <p>${cannel.snippet.description}</p>
+                <p>${channel.snippet.description}</p>
             `;
         })
         .catch(err => alert('No channel by the name of ' + channel))
