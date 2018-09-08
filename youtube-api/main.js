@@ -125,5 +125,25 @@ function requestVideoPlaylist(playlistId){
 
     request.execute(response => {
         console.log(response)
+        const playListItems = response.result.items;
+        console.log(playListItems)
+        if(playListItems){
+            let output = '<h4 class="center-align">Latest Videos</h4>'
+
+            // Loop through videos and append output
+            playListItems.forEach(item => {
+                const videoId = item.snippet.resourceId.videoId;
+                output += `
+                <div class="col s3">
+                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                `;
+            });
+
+            // Output videos
+            videoContainer.innerHTML = output;
+        } else {
+            videoContainer.innerHTML = 'No ulploaded videos';
+        }
     });
 }
