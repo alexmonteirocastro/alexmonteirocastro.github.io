@@ -76,13 +76,16 @@ function getChannel(channel){
         .then(response => {
             console.log(response);
             const channel = response.results.items[0];
+            console.log(channel);
             const output = `
                 <ul class="collection">
-                    </li class="collection-item">Title: ${channel.snippet.title}<li>
-                    </li class="collection-item">ID: ${channel.id}<li>
-                    </li class="collection-item">Subscribers: ${channel.statistics.subscriberCount}<li>
-                    </li class="collection-item">Views: ${channel.statistics.viewCount}<li>
+                    <li class="collection-item">Title: ${channel.snippet.title}</li>
+                    <li class="collection-item">ID: ${channel.id}</li>
+                    <li class="collection-item">Subscribers: ${channel.statistics.subscriberCount}</li>
+                    <li class="collection-item">Views: ${channel.statistics.viewCount}</li>
+                    <li class="collection-item">Videos: ${channel.statistics.videoCount}</li>
                 </ul>
+                <p>${cannel.snippet.description}</p>
             `;
         })
         .catch(err => alert('No channel by the name of ' + channel))
